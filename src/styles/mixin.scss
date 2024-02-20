@@ -1,0 +1,111 @@
+
+/**
+ * scss的混入样式
+ */
+	
+ @mixin flex {
+  display: flex;
+}
+
+@mixin flex-direction {
+	@include flex;
+  flex-direction: column;
+}
+
+@mixin fg1 {
+  flex: 1;
+}
+
+@mixin j-flex-end {
+  justify-content: flex-end;
+}
+
+@mixin c-flex-end {
+  align-items: flex-end;
+}
+
+@mixin j-self-end {
+	justify-self: flex-end;
+}
+
+@mixin c-self-end {
+	align-self: flex-end;
+}
+
+@mixin fs0 {
+  flex-shrink: 0;
+}
+
+@mixin c-center {
+  align-items: center;
+}
+
+@mixin j-center {
+  justify-content: center;
+}
+
+@mixin flex-between {
+	@include flex;
+  justify-content: space-between;
+}
+
+@mixin flex-c-center {
+	@include flex;
+	@include c-center;
+}
+
+@mixin flex-j-center {
+	@include flex;
+	@include j-center;
+}
+
+@mixin flex-center {
+	@include flex;
+	@include c-center;
+	@include j-center;
+}
+
+@mixin text-hidden {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin mult-hidden($line) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+}
+
+@mixin two-hidden {
+  @include mult-hidden(2);
+}
+
+@mixin no-select {
+  user-select: none;
+}
+
+@mixin inline-block {
+  display: inline-block;
+}
+
+@mixin it {
+  @include inline-block;
+  vertical-align: top;
+}
+
+@mixin im {
+  @include inline-block;
+  vertical-align: middle;
+}
+
+@mixin absolute-cover($index: 1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: $index;
+}

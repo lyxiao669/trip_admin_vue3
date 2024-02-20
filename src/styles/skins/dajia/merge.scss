@@ -1,0 +1,71 @@
+.app-main {
+  background-color: rgb(245, 246, 248);
+
+  .page-model_manager-container {
+    background-color: #fff;
+    margin: 20px;
+    padding: 0 20px 0;
+    box-sizing: border-box;
+    height: calc(100% - 40px);
+
+    border-radius: 2px;
+    box-shadow: 0px 1px 4px 0px rgba(184.88,184.88,184.88,0.1);
+
+    .page-model_model-head {
+      padding-top: 0;
+    }
+
+    .main-content {
+      padding: 0;
+    }
+
+    // 重置搜索颜色
+    .page-model_model-search .search-form {
+      background-color: inherit;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    // 表头颜色
+    .manager-table {
+      padding-top: 0;
+      .el-table__header-wrapper {
+        tr, th {
+          background-color: #F8F8F9;
+          color: #000;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .search-form {
+      .el-input {
+        width: 160px;
+      }
+    }
+  }
+}
+
+#app {
+  // 面包屑
+  .app-breadcrumb.el-breadcrumb {
+    font-weight: 500;
+  
+    .el-breadcrumb__separator {
+      font-weight: 400;
+      color: #000;
+    }
+
+    .no-redirect {
+      color: #000000;
+      font-size: 16px;
+    }
+  
+    .linked-tag {
+      color: #9C9C9C;
+      font-weight: 500;
+    }
+  }
+
+  
+}
