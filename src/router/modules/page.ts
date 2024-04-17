@@ -6,7 +6,8 @@ import { RouteRecordRaw } from 'vue-router'
 export enum PageRoutes {
   users = 'users',
   sceniSpots = 'sceni-spots',
-  orders = 'orders'
+  orders = 'orders',
+  feedback = 'feedback'
 }
 
 // import studentUser from '@/pages/student-user/index.vue'
@@ -14,9 +15,10 @@ export enum PageRoutes {
 // import question from '@/pages/question/index.vue'
 // import questionBack from '@/pages/question-bank/index.vue'
 // import banner from '@/pages/banner/index.vue'
-import Users from '@/pages/users/index.vue'
+import Users from '@/pages/Users/index.vue'
 import sceniSpots from '@/pages/scenic-spots/index.vue'
 import Orders from '@/pages/Orders/index.vue'
+import Feedback from '@/pages/Feedback/index.vue'
 const pages: RouteRecordRaw[] = [
   {
     path: '/users',
@@ -33,12 +35,20 @@ const pages: RouteRecordRaw[] = [
     meta: {
       title: '景区管理'
     }
-  },{
+  }, {
     path: '/orders',
     component: Orders,
     name: PageRoutes.orders,
     meta: {
       title: '订单管理'
+    }
+  },
+  {
+    path: '/feedback',
+    component: Feedback,
+    name: PageRoutes.feedback,
+    meta: {
+      title: '反馈管理'
     }
   }
 ]

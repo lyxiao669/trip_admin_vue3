@@ -1,12 +1,12 @@
 <template>
-  <page-model :config="config" ref="pageRef" />
+  <page-model :config="config" ref="pageRef"  />
 </template>
 
 <script setup lang="tsx">
 import { defineConfig } from '@juzhenfe/page-model'
 import { defineComponent, onMounted, reactive, ref } from 'vue'
 import request from '@/utils/request';
-import citys from '../../../public/city.json'; //省市区json库
+import citys from '@/static/city.json'; //省市区json库
 
 interface areaModel {
   center: [],
@@ -71,9 +71,9 @@ let config = defineConfig<ScenicSpot, { extend: ' ' }>({
             }))
           })),
         },
-        change(value, data, label) {
+        change(value) {
           pageRef.value.refreshTableData()
-          // console.log('value::', value)
+          console.log('value::', value)
         },
       },
     ]
@@ -107,6 +107,13 @@ let config = defineConfig<ScenicSpot, { extend: ' ' }>({
       {
         label: '景点名',
         prop: 'spotName'
+      },
+      {
+        label: '景点公告',
+        prop: 'notice',
+        props: {
+          showOverflowTooltip: true,
+        },
       },
       {
         label: '景点描述',
@@ -185,9 +192,13 @@ let config = defineConfig<ScenicSpot, { extend: ' ' }>({
       },
       {
         eType: 'editor',
+        label: '景点公告',
+        prop: 'notice'
+      },
+      {
+        eType: 'editor',
         label: '景点描述',
         prop: 'description'
-
       },
       {
         eType: 'el-cascader',

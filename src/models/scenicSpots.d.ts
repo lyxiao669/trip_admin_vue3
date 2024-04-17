@@ -12,6 +12,7 @@ interface ScenicSpot {
   address: string;
   telephone: string;
   openingHours: string;
+  notice: string;
   location: [number, number]; // [经度,纬度]
   KeyWord:string; //查询关键词
   area:[string,string]//省市区数据

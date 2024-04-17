@@ -10,7 +10,7 @@
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
     "@juzhenfe/modules": "^2.3.91",
-    "@juzhenfe/page-model": "^2.0.6",
+    "@juzhenfe/page-model": "^3.0.8",
     "@juzhenfe/request": "^1.7.9",
     "@types/lodash-es": "^4.17.12",
     "@vue/composition-api": "^1.7.2",

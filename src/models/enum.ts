@@ -7,6 +7,11 @@ export enum Ordertatus {
   已完成,
   已取消
 }
+
+export enum FeedbackStatus {
+  待处理,
+  已处理,
+}
 export enum OrdertatusTag {
   'primary',
   'success',

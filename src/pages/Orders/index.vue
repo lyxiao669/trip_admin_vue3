@@ -15,10 +15,14 @@ let config = defineConfig<OrderDetailResult, { extend: ' ' }>({
   delKey: 'id',
   table: {
     operate: {
+      width: 180,
       els: [
         {
           text: '完成订单',
           event: 'finish',
+          props:{
+            type:'text'
+          },
           isShow(self, data, index) {
               return data.status === 0
           }
@@ -26,6 +30,9 @@ let config = defineConfig<OrderDetailResult, { extend: ' ' }>({
         {
           text: '取消订单',
           event: 'cancel',
+          props:{
+            type:'text'
+          },
           isShow(self, data, index) {
               return data.status === 0
           }
@@ -33,6 +40,9 @@ let config = defineConfig<OrderDetailResult, { extend: ' ' }>({
         {
           text: '删除',
           isDel: true,
+          props:{
+            type:'text'
+          },
         }
       ]
     },
@@ -44,7 +54,8 @@ let config = defineConfig<OrderDetailResult, { extend: ' ' }>({
       },
       {
         label:'下单时间',
-        prop:'orderDate'
+        prop:'orderDate',
+        width:170
       },
       {
         label: '图片',
@@ -89,9 +100,6 @@ let config = defineConfig<OrderDetailResult, { extend: ' ' }>({
   },
 })
 
-let reflections = ref({
-  questions: []
-})
 let pageModelRef = ref<any>(null)
 const refreshTableData = () => {
   pageModelRef.value.refreshTableData()
