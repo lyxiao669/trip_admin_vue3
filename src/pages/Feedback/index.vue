@@ -14,6 +14,34 @@ let config = defineConfig<Feedback, { extend: ' ' }>({
   delUrl: 'Feedback/:id',
   delKey: 'id',
   isAutoAddButton: false,
+  searchForm:{
+    els: [
+      {
+        eType:'el-select',
+        label:'反馈状态筛选',
+        prop:'status',
+        props:{
+          placeholder:'请选择反馈状态',
+        },
+        optionsData:{
+          list:[
+            {
+              label:'全部',
+              value:-1
+            },
+            {
+              label:'未处理',
+              value:0
+            },
+            {
+              label:'已处理',
+              value:1
+            }
+          ]
+        }
+      }
+    ]
+  },
   table: {
     operate: {
       els: [
@@ -34,7 +62,7 @@ let config = defineConfig<Feedback, { extend: ' ' }>({
     els: [
       {
         label: '反馈时间',
-        prop: 'createDate'
+        prop:'createDate'
       },
       {
         label: '用户名',

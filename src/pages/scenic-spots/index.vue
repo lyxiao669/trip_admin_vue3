@@ -73,7 +73,7 @@ let config = defineConfig<ScenicSpot, { extend: ' ' }>({
         },
         change(value) {
           pageRef.value.refreshTableData()
-          console.log('value::', value)
+          // console.log('value::', value)
         },
       },
     ]

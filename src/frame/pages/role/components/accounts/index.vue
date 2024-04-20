@@ -11,10 +11,10 @@
       <el-table-column label="手机号" prop="mobile" />
       <el-table-column label="操作" width="400">
         <template v-slot="{ row }">
-          <el-button size="small" type="primary" icon="el-icon-unlock"  @click="updPwd(row)">改密码</el-button>
-          <el-button size="small" type="info" icon="el-icon-office-building" @click="updRole(row)">改部门</el-button>
-          <el-button size="small" type="success" icon="el-icon-edit" @click="updAccount(row)">编辑</el-button>
-          <el-button size="small" type="danger" icon="el-icon-delete" @click="delAccount(row.id)">删除</el-button>
+          <el-button size="small" type="primary"   @click="updPwd(row)">改密码</el-button>
+          <el-button size="small" type="info"  @click="updRole(row)">改部门</el-button>
+          <el-button size="small" type="success"  @click="updAccount(row)">编辑</el-button>
+          <el-button size="small" type="danger"  @click="delAccount(row.id)">删除</el-button>
         </template>
       </el-table-column>
     </el-table>

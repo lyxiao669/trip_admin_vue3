@@ -13,6 +13,39 @@ let config = defineConfig<OrderDetailResult, { extend: ' ' }>({
   delUrl: 'Orders/:id',
   isAutoAddButton:false,
   delKey: 'id',
+  searchForm: {
+      els: [
+        {
+          eType:'el-select',
+          label:'订单状态筛选',
+          prop:'status',
+          props:{
+            placeholder:'请选择订单状态',
+            
+          },
+          optionsData:{
+            list:[
+            {
+              label:'全部',
+              value:-1
+            },
+            {
+              label:'未完成',
+              value:0
+            },
+            {
+              label:'已完成',
+              value:1
+            },
+            {
+              label:'已取消',
+              value:2
+            }
+            ]
+          }
+        }
+      ]
+    },
   table: {
     operate: {
       width: 180,
